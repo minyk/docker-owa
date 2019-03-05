@@ -1,6 +1,10 @@
 Docker for OpenWebAnalytics
 ===========================
 
+# OWA
+
+Opensource version of Google Analytics. See: http://www.openwebanalytics.com/
+
 # How to
 
 ### Build
