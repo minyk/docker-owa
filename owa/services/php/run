@@ -1,0 +1,5 @@
+#!/bin/bash
+
+envtpl -o /app/owa-config.php /app/owa-config.php.tpl
+mkdir -p /run/php
+php-fpm7.0 -F

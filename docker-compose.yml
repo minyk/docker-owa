@@ -1,0 +1,20 @@
+version: '2'
+services:
+  percona:
+    image: percona/percona-server:5.7.25
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: owa
+      MYSQL_USER: owa
+      MYSQL_PASSWORD: owa
+  owa:
+    image: minyk/owa:dev
+    build:
+      context: ./owa
+      args:
+        OWA_VERSION: 1.6.2
+    ports:
+      - 8080:80
+    environment:
+      OWA_PUBLIC_URL: "http://localhost:8080/"
+      OWA_DB_HOST: "percona:3306"
